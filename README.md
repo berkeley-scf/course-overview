@@ -15,7 +15,11 @@ UC Berkeley
 
 
 ## Offerings
-1. [Spring 2024](spring-2024)
+
+[//]: # (Items below should be of the form [Semester YYYY](semester-year)
+
+1. [Quarto Example](/stat999-quarto)
+1. [MyST Example](/stat999-myst)
 
 ## Overview
 
