@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Stat Course Landing Site
+title: Stat Course Overview Site
 tagline: A Jekyll template for course landing sites
 description: A modern, highly customizable, responsive Jekyll template for course websites, based on Just the Class
 author: SCF
