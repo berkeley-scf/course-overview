@@ -19,7 +19,7 @@ UC Berkeley
 
 ## Overview
 
-This is a GitHub Pages template based on Just the Class, developed for the purpose of quickly deploying course websites. We use the template to create course landing pages which link to previous course offerings, provide a course overview, and list goals and prerequisites. This paragraph would normally be replaced by an overview of a specific course, and could include information from the [Berkeley Academic Guide](https://guide.berkeley.edu/courses/stat/).
+This is a GitHub Pages template based on Just the Class, developed for the purpose of quickly deploying course overview websites. Such websites link to previous course offerings, provide a summary of what the course is about, and may list learning goals and prerequisites. This paragraph would normally be replaced by an overview of a specific course, and could include information from the [Berkeley Academic Guide](https://guide.berkeley.edu/courses/stat/).
 
 ## Goals
 
