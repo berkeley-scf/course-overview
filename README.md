@@ -18,8 +18,8 @@ UC Berkeley
 
 [//]: # (Items below should be of the form [Semester YYYY](semester-year)
 
-1. [Quarto Example](/stat999-quarto)
-1. [MyST Example](/stat999-myst)
+1. [Spring 2023 (Quarto)](stat999-myst)
+1. [Fall 2024 (MyST)](stat999-myst)
 
 ## Overview
 
