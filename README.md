@@ -27,6 +27,18 @@ UC Berkeley
 
 This is a GitHub Pages template based on Just the Class, developed for the purpose of quickly deploying course overview websites. Such websites link to previous course offerings, provide a summary of what the course is about, and may list learning goals and prerequisites. This paragraph would normally be replaced by an overview of a specific course, and could include information from the [Berkeley Academic Guide](https://guide.berkeley.edu/courses/stat/).
 
+When instantiating this template, change:
+
+  - `README.md`
+    - the `title` and `name` fields in the frontmatter
+    - the "Short Title of Class" heading to be the course name followed by its title in the Academic Guide, e.g. "Stat 555: Adventures in Class Websites"
+    - add an initial entry in the Offerings section
+    - the Overview section and Prequisites, based on content in the [Academic Guide](https://guide.berkeley.edu/courses/stat/)
+
+  - `_config.yml`
+    - Set `baseurl` to be the empty string, ''.
+    - Set `url` to be the institutional address, e.g. https://stat555.stat.berkeley.edu
+
 ## Goals
 
 - **Do** list some goals for the course here.
