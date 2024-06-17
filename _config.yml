@@ -22,6 +22,8 @@ url: 'https://berkeley-scf.github.io' # the base hostname & protocol for your si
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 logo: 'resources/stat_bear.png'
 
+# ga_tracking: G-...
+
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.7.0
 color_scheme: light
