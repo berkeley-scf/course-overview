@@ -11,12 +11,12 @@ catalogNumber:
   suffix: ''
 
 description: |
-  This is a GitHub Pages template based on Just the Class, developed for
-  the purpose of quickly deploying course overview websites. Such websites
-  link to previous course offerings, provide a summary of what the course
-  is about, and may list learning goals and prerequisites. This paragraph
-  would normally be replaced by the description of a specific course, and
-  could include information from the [Berkeley Academic
+  This is a GitHub Pages template based on Just the Class, developed for the
+  purpose of quickly deploying course overview websites. Such websites link to
+  previous course offerings, provide a summary of what the course is about,
+  and may list learning goals and prerequisites. This overview section would
+  normally be replaced by the description of a specific course, and could
+  include information from the [Berkeley Academic
   Guide](https://guide.berkeley.edu/courses/stat/).
 
   ### Configuration
@@ -37,12 +37,12 @@ description: |
 
 formatsOffered:
   description: |
-    (Example from SIS) Three hours of lecture and two hours of laboratory
-    per week. Six hours of lecture and three hours of laboratory per week
-    for 8 weeks.
+    (Example from SIS) Three hours of lecture and two hours of laboratory per
+    week. Six hours of lecture and three hours of laboratory per week for 8
+    weeks.
 
 preparation:
   requiredText: |
-    (Example from SIS) Mathematics 1A, Mathematics 16A, Mathematics
-    10A/10B, or consent of instructor.
+    (Example from SIS) Mathematics 1A, Mathematics 16A, Mathematics 10A/10B,
+    or consent of instructor.
 
