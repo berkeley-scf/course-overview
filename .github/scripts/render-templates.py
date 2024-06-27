@@ -6,10 +6,19 @@ import logging
 import os
 from pathlib import Path
 import sys
+import yaml
 
 from jinja2 import Environment, FileSystemLoader
 
 from sis import course
+
+
+def file_exists(filename):
+    """argparse helper to check that input file exists."""
+    file_path = Path(filename)
+    if not file_path.is_file():
+        raise argparse.ArgumentTypeError(f"File '{filename}' does not exist.")
+    return filename
 
 
 async def get_course_data(app_id, app_key, subject_area, course_number):
@@ -140,6 +149,11 @@ async def main():
         help="Google Analytics tag. Default is GOOGLE_ANALYTICS_TAG.",
     )
     parser.add_argument(
+        "--course-data-file",
+        type=file_exists,
+        help=f"Path to course data file, that overrides SIS data.",
+    )
+    parser.add_argument(
         "-v",
         "--verbose",
         action="count",
@@ -159,13 +173,29 @@ async def main():
 
     logging.basicConfig(level=log_level)
 
+    for e in [
+        "SIS_COURSE_API_ID",
+        "SIS_COURSE_API_KEY",
+    ]:
+        if e not in os.environ:
+            raise (Exception, "'{e}' not defined in environment.")
+
     # Fetch course data from SIS
     data = await get_course_data(
         os.environ.get("SIS_COURSE_API_ID"),
         os.environ.get("SIS_COURSE_API_KEY"),
         args.subject_area,
-        args.course_number
+        args.course_number,
     )
+
+    # Read data from local file if it exists
+    override_data = {}
+    if args.course_data_file:
+        with open(args.course_data_file, "r") as f:
+            override_data = yaml.safe_load(f)
+
+    # Merge data from file
+    data.update(override_data)
 
     # Set various config parameters
     config_vars = dict(
@@ -175,6 +205,7 @@ async def main():
 
     # Generate course site
     generate_course_site(data, args.directory, config_vars, args.verbose)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
