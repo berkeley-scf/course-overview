@@ -191,13 +191,14 @@ async def main():
     )
 
     # Read data from local file if it exists
-    override_data = {}
+    override_data = None
     if args.course_data_file:
         with open(args.course_data_file, "r") as f:
             override_data = yaml.safe_load(f)
 
     # Merge data from file
-    data.update(override_data)
+    if override_data:
+        data.update(override_data)
 
     # Set various config parameters
     config_vars = dict(
