@@ -142,7 +142,7 @@ async def main():
         "--author",
         type=str,
         default=_author,
-        help="Google Analytics tag. Default is CONFIG_AUTHOR.",
+        help="Set website author. Default is CONFIG_AUTHOR.",
     )
     parser.add_argument(
         "--google-analytics-tag",
