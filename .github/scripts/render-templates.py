@@ -180,7 +180,7 @@ async def main():
         "SIS_COURSE_API_KEY",
     ]:
         if e not in os.environ:
-            raise (Exception, "'{e}' not defined in environment.")
+            raise Exception("'{e}' not defined in environment.")
 
     # Fetch course data from SIS
     data = await get_course_data(
