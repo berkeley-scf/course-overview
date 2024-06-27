@@ -38,17 +38,14 @@ jobs:
         SIS_COURSE_NUMBER: ${{ vars.SIS_COURSE_NUMBER }}
         AUTHOR: ${{ vars.AUTHOR }}
         GOOGLE_ANALYTICS_TAG: ${{ vars.GOOGLE_ANALYTICS_TAG }}
+        COURSE_DATA_FILE: ${{ vars.COURSE_DATA_FILE || '/dev/null' }}
       run: |
-        OVERRIDE=";"
-        if [ -n "${COURSE_DATA_FILE}" -a -f "${COURSE_DATA_FILE}" ]; then
-          OVERRIDE="--course-data-file=${COURSE_DATA_FILE}"
-        fi
         python .github/scripts/render-templates.py \
           --subject-area=${SIS_SUBJECT_AREA} \
           --course-number=${SIS_COURSE_NUMBER} \
           --author=${AUTHOR} \
           --google-analytics-tag=${GOOGLE_ANALYTICS_TAG} \
-          ${OVERRIDE}
+          --course-data-file=${COURSE_DATA_FILE}
 
     - name: Configure git identity
       env:
