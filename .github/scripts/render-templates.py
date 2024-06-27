@@ -63,7 +63,7 @@ def generate_course_site(course_data, directory, config_vars, verbose):
 
     # Read offerings file, if it exists
     offerings_file_path = Path(directory + "/offerings.md")
-    if os.path.exists(offerings_file_path):
+    if offerings_file_path.is_file():
         with open(offerings_file_path, "r") as f:
             offerings_content = f.read()
     else:
