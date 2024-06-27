@@ -1,2 +1,3 @@
 jinja2
+yaml
 git+https://github.com/ryanlovett/sis-cli.git@dc88423
