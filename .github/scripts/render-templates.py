@@ -72,7 +72,9 @@ def generate_course_site(course_data, directory, config_vars, verbose):
     # Render _config.yml template
     config_template = env.get_template("_config.yml.j2")
     try:
-        config_output = config_template.render(course=course_data, config_vars=config_vars)
+        config_output = config_template.render(
+            course=course_data, config_vars=config_vars
+        )
     except Exception as e:
         print(e)
         print(course_data)
@@ -80,7 +82,7 @@ def generate_course_site(course_data, directory, config_vars, verbose):
 
     # Write _config.yml
     config_file_path = Path(directory + "/_config.yml")
-    with open(config_file_path, 'w') as config_file:
+    with open(config_file_path, "w") as config_file:
         config_file.write(config_output)
         logging.info(f"Wrote to {config_file_path}")
 
