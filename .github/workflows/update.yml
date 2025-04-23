@@ -1,6 +1,38 @@
 name: Update website
 
 on:
+  # Required for reusable workflows
+  workflow_call:
+    inputs:
+      SIS_SUBJECT_AREA:
+        required: true
+        type: string
+      SIS_CATALOG_NUMBER:
+        required: true
+        type: string
+      AUTHOR:
+        required: true
+        type: string
+      GOOGLE_ANALYTICS_TAG:
+        required: true
+        type: string
+      COURSE_DATA_FILE:
+        required: false
+        type: string
+        default: '/dev/null'
+      GIT_NAME:
+        required: true
+        type: string
+      GIT_EMAIL:
+        required: true
+        type: string
+    secrets:
+      SIS_COURSE_API_ID:
+        required: true
+      SIS_COURSE_API_KEY:
+        required: true
+      GITHUB_TOKEN:
+        required: true
   workflow_dispatch:
   schedule:
     - cron: "5 2 1 * *"
